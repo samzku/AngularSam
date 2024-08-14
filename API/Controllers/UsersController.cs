@@ -17,6 +17,7 @@ public class UsersController(DataContext context) : ControllerBase
     public async Task<ActionResult<IEnumerable<AppUser>>> GetUsers()
     {
         var users = await _context.Users.ToListAsync();
+        
         return Ok(users);
     }
 
